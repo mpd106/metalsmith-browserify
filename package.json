@@ -1,9 +1,9 @@
 {
   "name": "metalsmith-browserify",
-  "version": "",
-  "author": "",
-  "description": "",
-  "private": "true",
+  "description": "A metalsmith plugin to browserify your javascript",
+  "repository": "git://github.com/mpd106/metalsmith-browserify",
+  "version": "0.0.1",
+  "license": "MIT",
   "main": "lib/index.js",
   "devDependencies": {
     "mocha": "^2.1.0",
