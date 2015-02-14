@@ -8,7 +8,8 @@ describe('metalsmith-browserify', function() {
     Metalsmith('test/fixtures/basic')
       .use(browserify({
         files: ['scripts/source.js'],
-        dest: 'scripts/bundle.js'
+        dest: 'scripts/bundle.js',
+        excludeOtherSources: false
       }))
       .build(function(err) {
         if (err) return done(err);
@@ -21,7 +22,8 @@ describe('metalsmith-browserify', function() {
     Metalsmith('test/fixtures/multiple')
       .use(browserify({
         files: ['scripts/awesome.js', 'scripts/hats.js'],
-        dest: 'scripts/bundle.js'
+        dest: 'scripts/bundle.js',
+        excludeOtherSources: false
       }))
       .build(function(err) {
         if (err) return done(err);
@@ -34,7 +36,8 @@ describe('metalsmith-browserify', function() {
     Metalsmith('test/fixtures/samename')
       .use(browserify({
         files: ['scripts/awesome.js', 'scripts/hats.js'],
-        dest: 'scripts/hats.js'
+        dest: 'scripts/hats.js',
+        excludeOtherSources: false
       }))
       .build(function(err) {
         if (err) return done(err);
