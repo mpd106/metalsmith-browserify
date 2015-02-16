@@ -26,7 +26,7 @@ A metalsmith plugin to browserify your javascript.
 ```js
 metalsmith.use(browserify({
   files: ['path/to/source'],
-  dest: ['path/to/destination'],
+  dest: 'path/to/destination'
 }));
 ```
 
