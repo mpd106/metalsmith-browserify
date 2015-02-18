@@ -34,6 +34,7 @@ metalsmith.use(browserify({
 
 - `files`: array of source file paths
 - `dest`: bundle destination path
+- `transforms`: array of transform instances to be passed through to b.transform
 - `excludeOtherSources`: if true, remove all js files other than `dest` from the output (default true)
 - `emitSourceMap`: if true, append a source map to `dest` (default false)
 
