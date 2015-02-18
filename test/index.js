@@ -46,12 +46,11 @@ describe('metalsmith-browserify', function() {
       });
   });
 
-  it('should exclude other js files from destination', function(done) {
+  it('should exclude other js files from destination by default', function(done) {
     Metalsmith('test/fixtures/remove other sources')
       .use(browserify({
         files: ['scripts/awesome.js', 'scripts/hats.js'],
         dest: 'scripts/hats.js',
-        excludeOtherSources: true
       }))
       .build(function(err) {
         if (err) return done(err);
@@ -65,7 +64,6 @@ describe('metalsmith-browserify', function() {
       .use(browserify({
         files: ['scripts/source.js'],
         dest: 'scripts/bundle.js',
-        excludeOtherSources: true,
         emitSourceMap: true
       }))
       .build(function(err) {
@@ -73,5 +71,20 @@ describe('metalsmith-browserify', function() {
         equal('test/fixtures/sourcemap/expected', 'test/fixtures/sourcemap/build');
         done();
       });
-    });
+  });
+
+  it('should run a transform on sources', function(done) {
+    var coffeeify = require('coffeeify');
+    Metalsmith('test/fixtures/transform')
+      .use(browserify({
+        files: ['scripts/awesome.coffee', 'scripts/hats.js'],
+        dest: 'scripts/bundle.js',
+        transforms: [coffeeify]
+      }))
+      .build(function(err) {
+        if (err) return done(err);
+        equal('test/fixtures/transform/expected', 'test/fixtures/transform/build');
+        done();
+      });
+  });
 });
