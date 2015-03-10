@@ -37,6 +37,7 @@ metalsmith.use(browserify({
 - `transforms`: array of transform instances to be passed through to b.transform
 - `excludeOtherSources`: if true, remove all js files other than `dest` from the output (default true)
 - `emitSourceMap`: if true, append a source map to `dest` (default false)
+- `standalone`: if passed a string, exposes resulting module on window
 
 ## License
 
