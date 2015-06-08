@@ -1,4 +1,4 @@
-# metalsmith-browserify
+# metalsmith-browserify [![Build Status](https://travis-ci.org/mpd106/metalsmith-browserify.svg?branch=master)](https://travis-ci.org/mpd106/metalsmith-browserify)
 
 A metalsmith plugin to browserify your javascript.
 
