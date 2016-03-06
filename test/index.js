@@ -87,4 +87,18 @@ describe('metalsmith-browserify', function() {
         done();
       });
   });
+
+  it('should create a standalone build', function(done) {
+    Metalsmith('test/fixtures/standalone')
+      .use(browserify({
+        files: ['scripts/source.js'],
+        dest: 'scripts/bundle.js',
+        standalone: 'hats'
+      }))
+      .build(function(err) {
+        if (err) return done(err);
+        equal('test/fixtures/standalone/expected', 'test/fixtures/standalone/build');
+        done();
+      });
+  });
 });
