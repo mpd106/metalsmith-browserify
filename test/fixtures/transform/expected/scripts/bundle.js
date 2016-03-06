@@ -4,7 +4,6 @@ module.exports = function(m) {
 };
 
 
-
 },{}],2:[function(require,module,exports){
 module.exports = function() {
   // do some stuff
