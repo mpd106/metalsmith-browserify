@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "mocha": "^2.2.5",
-    "metalsmith": "^1.7.0",
+    "metalsmith": "^2.1.0",
     "assert-dir-equal": "^1.0.1",
-    "coffeeify": "^1.1.0"
+    "coffeeify": "^2.0.1"
   },
   "dependencies": {
-    "browserify": "^10.2.4",
+    "browserify": "^13.0.1",
     "mkdirp": "^0.5.1",
     "promise": "^7.0.1"
   }
