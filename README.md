@@ -2,10 +2,6 @@
 
 A metalsmith plugin to browserify your javascript.
 
-## Installation
-
-    $ npm install metalsmith-browserify
-
 ### Usage
 
 #### metalsmith.json
