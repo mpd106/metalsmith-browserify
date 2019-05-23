@@ -15,7 +15,7 @@
     "mocha": "^6.1.4"
   },
   "dependencies": {
-    "browserify": "^13.0.1",
+    "browserify": "^16.2.3",
     "mkdirp": "^0.5.1",
     "promise": "^7.0.1"
   }
