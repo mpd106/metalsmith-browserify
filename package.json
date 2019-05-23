@@ -9,10 +9,10 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "metalsmith": "^2.1.0",
     "assert-dir-equal": "^1.0.1",
-    "coffeeify": "^2.0.1"
+    "coffeeify": "^2.0.1",
+    "metalsmith": "^2.1.0",
+    "mocha": "^6.1.4"
   },
   "dependencies": {
     "browserify": "^13.0.1",
